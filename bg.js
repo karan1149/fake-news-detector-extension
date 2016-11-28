@@ -9,17 +9,21 @@ function getRandomToken() {
     return hex;
 }
 
-chrome.storage.sync.get('userid', function(items) {
-    var userid = items.userid;
-    if (userid) {
-        useToken(userid);
-    } else {
-        userid = getRandomToken();
-        chrome.storage.sync.set({userid: userid}, function() {
-            useToken(userid);
-        });
-    }
-    function useToken(userid) {
-        // TODO: Use user id for authentication or whatever you want.
-    }
+function useToken(userid) {
+    // TODO: Use user id for authentication or whatever you want.
+}
+
+// Called when the user clicks on the browser action.
+chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.storage.sync.get('userid', function(items) {
+      var userid = items.userid;
+      if (userid) {
+          useToken(userid);
+      } else {
+          userid = getRandomToken();
+          chrome.storage.sync.set({userid: userid}, function() {
+              useToken(userid);
+          });
+      }
+  });
 });
