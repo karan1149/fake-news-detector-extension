@@ -20,5 +20,8 @@
  "background": {
     "scripts": ["bg.js"],
     "persistent": false
-  }
+  },
+  "permissions": [
+    "activeTab"
+  ],
 }
