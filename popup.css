@@ -1,0 +1,11 @@
+body {
+  width: 300px;
+  background-color: #eee;
+  padding: 20px;
+  text-align:center;
+  color: #444;
+  transition: background-color 0.5s ease;
+}
+#spinner {
+  width: 100px;
+}
