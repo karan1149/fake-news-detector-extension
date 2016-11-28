@@ -43,3 +43,7 @@ showFake = function(){
 // // Testing event handlers
 // document.getElementById('real').addEventListener('click', showReal);
 // document.getElementById('fake').addEventListener('click', showFake);
+// Testing event handlers
+document.getElementById('real').addEventListener('click', showReal);
+document.getElementById('fake').addEventListener('click', showFake);
+document.getElementById('error').addEventListener('click', showError);
