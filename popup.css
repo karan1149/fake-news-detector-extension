@@ -29,19 +29,3 @@ body {
   animation-duration: .75s;
   animation-fill-mode: both;
 }
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-.fadeOut {
-  animation-name: fadeOut;
-  animation-duration: .75s;
-  animation-fill-mode: both;
-}
