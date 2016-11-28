@@ -1,0 +1,19 @@
+{
+ "name": "Fake News Detector",
+ "version": "1",
+ "description": "Detects fake news sites based on their content",
+ "manifest_version": 2,
+ "default_locale": "en",
+ "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+ "browser_action": {
+   "name": "Check news site",
+   "icons": ["icon.png"],
+   "default_icon": "icon.png"
+ },
+ "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+  }
+}
