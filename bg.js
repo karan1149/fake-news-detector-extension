@@ -9,21 +9,41 @@ function getRandomToken() {
     return hex;
 }
 
-function useToken(userid) {
-    // TODO: Use user id for authentication or whatever you want.
+function useToken(id, url) {
+    var popups = chrome.extension.getViews({type: "popup"});
+    if (popups.length > 0){
+
+      var popup = popups[0];
+      popup.showReal();
+    }
+
+
 }
 
-// Called when the user clicks on the browser action.
+Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
+  console.log("he3llo");
   chrome.storage.sync.get('userid', function(items) {
       var userid = items.userid;
       if (userid) {
-          useToken(userid);
+          useToken(userid, tab.url);
+          console.log("hell4o");
       } else {
           userid = getRandomToken();
           chrome.storage.sync.set({userid: userid}, function() {
-              useToken(userid);
+              useToken(userid, tab.url);
+              console.log("hello");
           });
       }
   });
 });
+
+
+// // Called when the user clicks on the browser action.
+// chrome.browserAction.onClicked.addListener(function(tab) {
+//   // No tabs or host permissions needed!
+//   console.log('Turning ' + tab.url + ' red!');
+//   chrome.tabs.executeScript({
+//     code: 'document.body.style.backgroundColor="red"'
+//   });
+// });
