@@ -1,3 +1,7 @@
+// Testing event handlers
+document.getElementById('real').addEventListener('click', showReal);
+document.getElementById('fake').addEventListener('click', showFake);
+document.getElementById('error').addEventListener('click', showError);
 
 showReal = function(){
   body = document.body;
@@ -40,13 +44,6 @@ showFake = function(){
   displayDiv.innerHTML += analyzed;
 };
 
-// // Testing event handlers
-// document.getElementById('real').addEventListener('click', showReal);
-// document.getElementById('fake').addEventListener('click', showFake);
-// Testing event handlers
-document.getElementById('real').addEventListener('click', showReal);
-document.getElementById('fake').addEventListener('click', showFake);
-document.getElementById('error').addEventListener('click', showError);
 // util code
 function getRandomToken() {
     // E.g. 8 * 32 = 256 bits token
