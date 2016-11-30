@@ -4,7 +4,7 @@ body {
   padding: 20px;
   text-align:center;
   color: #444;
-  transition: background-color 0.5s ease;
+  transition: background-color .75s ease;
   font-size:13px;
   font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
 }
