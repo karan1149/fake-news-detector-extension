@@ -47,3 +47,14 @@ showFake = function(){
 document.getElementById('real').addEventListener('click', showReal);
 document.getElementById('fake').addEventListener('click', showFake);
 document.getElementById('error').addEventListener('click', showError);
+// util code
+function getRandomToken() {
+    // E.g. 8 * 32 = 256 bits token
+    var randomPool = new Uint8Array(32);
+    crypto.getRandomValues(randomPool);
+    var hex = '';
+    for (var i = 0; i < randomPool.length; ++i) {
+        hex += randomPool[i].toString(16);
+    }
+    return hex;
+}
