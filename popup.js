@@ -1,10 +1,10 @@
-var analyzed = "We analyzed this website to see if it was similar to known fake news sites using a machine learning model. The same technology is used to power other artificial intelligence applications, like Siri and self-driving cars!";
 
 showReal = function(){
   body = document.body;
   displayDiv = document.getElementById("displayText");
   spinner = document.getElementById("spinner");
   header = document.getElementById("headerText");
+var analyzed = "We analyzed this website to see if it was similar to known fake news sites using a machine learning model. The same technology is used to power other artificial intelligence applications, like Siri and self-driving cars!";
 
   spinner.style.display = "none";
   displayDiv.className += " fadeIn";
