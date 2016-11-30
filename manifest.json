@@ -1,25 +1,13 @@
 {
  "name": "Fake News Detector",
  "version": "1",
- "description": "Detects fake news sites based on their content",
+ "description": "Detects fake news sites based on whether they are similar to known fake news sites using machine learning.",
  "manifest_version": 2,
- "icons": { "16": "images/icon16.png",
-           "48": "images/icon48.png",
-          "128": "images/icon128.png" },
  "browser_action": {
    "name": "Fake News Detector",
-   "default_icon": {
-            "16": "images/icon16.png",
-            "24": "images/icon24.png",
-            "32": "images/icon32.png"
-   },
    "default_title": "Check site",
    "default_popup": "popup.html"
  },
- "background": {
-    "scripts": ["bg.js"],
-    "persistent": false
-  },
   "permissions": [
     "activeTab"
   ]
