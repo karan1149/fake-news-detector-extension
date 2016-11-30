@@ -44,6 +44,25 @@ showFake = function(){
   displayDiv.innerHTML += analyzed;
 };
 
+function showError(errorMessage){
+  var body = document.body;
+  var displayDiv = document.getElementById("displayText");
+  var spinner = document.getElementById("spinner");
+  var header = document.getElementById("headerText");
+
+  spinner.style.display = "none";
+
+  header.innerText = "Error!";
+  if (!errorMessage){
+    displayDiv.innerHTML = "This site does not appear to be a valid news site.";
+  } else {
+    displayDiv.innerHTML = errorMessage;
+  }
+
+  displayDiv.className += " fadeIn";
+  header.className += " fadeIn";
+}
+
 // util code
 function getRandomToken() {
     // E.g. 8 * 32 = 256 bits token
