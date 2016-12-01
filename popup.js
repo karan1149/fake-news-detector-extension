@@ -9,6 +9,11 @@ showReal = function(){
   spinner = document.getElementById("spinner");
   header = document.getElementById("headerText");
 var analyzed = "We analyzed this website to see if it was similar to known fake news sites using a machine learning model. The same technology is used to power other artificial intelligence applications, like Siri and self-driving cars!";
+function showReal(){
+  var body = document.body;
+  var displayDiv = document.getElementById("displayText");
+  var spinner = document.getElementById("spinner");
+  var header = document.getElementById("headerText");
 
   spinner.style.display = "none";
 
@@ -25,11 +30,11 @@ var analyzed = "We analyzed this website to see if it was similar to known fake 
 
 };
 
-showFake = function(){
-  body = document.body;
-  displayDiv = document.getElementById("displayText");
-  spinner = document.getElementById("spinner");
-  header = document.getElementById("headerText");
+function showFake(){
+  var body = document.body;
+  var displayDiv = document.getElementById("displayText");
+  var spinner = document.getElementById("spinner");
+  var header = document.getElementById("headerText");
 
   spinner.style.display = "none";
 
