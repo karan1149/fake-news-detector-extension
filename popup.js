@@ -76,3 +76,9 @@ function getRandomToken() {
     }
     return hex;
 }
+// generate location object from link
+var getLocation = function(href) {
+    var l = document.createElement("a");
+    l.href = href;
+    return l;
+};
