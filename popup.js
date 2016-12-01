@@ -3,11 +3,20 @@ document.getElementById('real').addEventListener('click', showReal);
 document.getElementById('fake').addEventListener('click', showFake);
 document.getElementById('error').addEventListener('click', showError);
 
-showReal = function(){
-  body = document.body;
-  displayDiv = document.getElementById("displayText");
-  spinner = document.getElementById("spinner");
-  header = document.getElementById("headerText");
+var apiURL = "http://localhost:3000/detect"
+
+chrome.storage.sync.get('userid', function(items) {
+    var userid = items.userid;
+    if (userid) {
+        useToken(userid);
+    } else {
+        userid = getRandomToken();
+        chrome.storage.sync.set({userid: userid}, function() {
+            useToken(userid);
+        });
+    }
+});
+
 var analyzed = "We analyzed this website to see if it was similar to known fake news sites using a machine learning model. The same technology is used to power other artificial intelligence applications, like Siri and self-driving cars!";
 function showReal(){
   var body = document.body;
