@@ -1,7 +1,7 @@
 body {
   width: 320px;
   background-color: #eee;
-  padding: 20px;
+  padding: 10px;
   text-align:center;
   color: #444;
   transition: background-color .75s ease;
@@ -16,8 +16,12 @@ body {
   opacity: 0;
 }
 
+span {
+  font-size:19px;
+}
+
 #headerText {
-  font-size: 35px;
+  font-size: 38px;
   font-weight: bold;
   margin-bottom: 7px;
 }
