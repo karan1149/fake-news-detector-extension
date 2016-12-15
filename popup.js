@@ -1,9 +1,9 @@
 // Testing event handlers
-document.getElementById('real').addEventListener('click', showReal);
-document.getElementById('fake').addEventListener('click', showFake);
-document.getElementById('error').addEventListener('click', showError);
+// document.getElementById('real').addEventListener('click', showReal);
+// document.getElementById('fake').addEventListener('click', showFake);
+// document.getElementById('error').addEventListener('click', showError);
 
-var apiURL = "http://fakenewsai.com/detect"
+var apiURL = "http://www.fakenewsai.com/detect"
 
 chrome.storage.sync.get('userid', function(items) {
     var userid = items.userid;
