@@ -1,15 +1,16 @@
 {
- "name": "Fake News Detector",
+ "name": "Fake News AI",
  "version": "1",
  "description": "Detects fake news sites based on whether they are similar to known fake news sites using artificial intelligence.",
  "manifest_version": 2,
  "browser_action": {
-   "name": "Fake News Detector",
+   "name": "Fake News AI",
    "default_title": "Check site",
    "default_popup": "popup.html"
  },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "http://fakenewsai.com/"
   ]
 }
