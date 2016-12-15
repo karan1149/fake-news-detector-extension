@@ -17,6 +17,42 @@ chrome.storage.sync.get('userid', function(items) {
     }
 });
 
+// use token, load URL and then make request
+function useToken(id) {
+  chrome.tabs.query({active:true,currentWindow:true},function(tabArray){
+    url = tabArray[0].url;
+    pageLocation = getLocation(url);
+    if (!pageLocation.protocol.startsWith("http")){
+      showError();
+      return;
+    }
+    shortenedURL = pageLocation.protocol + "//" + pageLocation.hostname;
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4){
+        if (this.status == 200) {
+          data = JSON.parse(this.responseText);
+          if (data.error){
+            showError("Oops! There was an error while we were checking the site.");
+          } else {
+            if (data.fake){
+              showFake();
+            } else {
+              showReal();
+            }
+          }
+        } else {
+          showError("Oops! There was a connection error while we were checking the site.");
+        }
+      }
+    };
+    xmlhttp.open("GET", apiURL + "?url=" + encodeURIComponent(shortenedURL), true);
+    xmlhttp.send();
+    });
+}
+
+// display code
 var analyzed = "We analyzed this website to see if it was similar to known fake news sites using a machine learning model. The same technology is used to power other artificial intelligence applications, like Siri and self-driving cars!";
 function showReal(){
   var body = document.body;
