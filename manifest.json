@@ -1,10 +1,10 @@
 {
- "name": "Fake News AI: Detect Unreliable News Sources",
+ "name": "Fake News Detector AI: Detect Unreliable News Sources Using AI",
  "version": "1",
  "description": "Detects fake news sites based on whether they are similar to known fake news sites using artificial intelligence.",
  "manifest_version": 2,
  "browser_action": {
-   "name": "Fake News AI",
+   "name": "Fake News Detector AI",
    "default_title": "Check site",
    "default_popup": "popup.html"
  },
@@ -12,5 +12,9 @@
     "activeTab",
     "storage",
     "http://www.fakenewsai.com/"
-  ]
+  ],
+  "icons": { "16": "images/icon16.png",
+            "32": "images/icon32.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png" }
 }
