@@ -1,5 +1,10 @@
+@@font-face {
+  font-family: 'Norwester';
+  src: url('./fonts/Norwester.otf') format('opentype');
+}
+
 body {
-  width: 320px;
+  width: 350px;
   background-color: #eee;
   padding: 10px;
   text-align:center;
@@ -21,6 +26,7 @@ span {
 }
 
 #headerText {
+  font-family: "Norwester", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 38px;
   font-weight: bold;
   margin-bottom: 7px;
