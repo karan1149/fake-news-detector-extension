@@ -69,8 +69,8 @@ function showReal(){
   displayDiv.className += " fadeIn";
   header.className += " fadeIn";
 
-  body.style.backgroundColor = "#D9FFD9";
-  body.style.color = "#004000";
+  body.style.backgroundColor = "#009900";
+  body.style.color = "white";
 
 
 };
@@ -84,14 +84,14 @@ function showFake(){
   spinner.style.display = "none";
 
   header.innerText = "Fake!";
-  displayDiv.innerHTML = "<span>This site is probably not a reliable source for news.</span><br /><br />";
+  displayDiv.innerHTML = "<span>This site is probably not a reliable news source.</span><br /><br />";
   displayDiv.innerHTML += analyzed;
 
   displayDiv.className += " fadeIn";
   header.className += " fadeIn";
 
-  body.style.backgroundColor = "#FFD9D9";
-  body.style.color = "#730000";
+  body.style.backgroundColor = "#c00000";
+  body.style.color = "white";
 
 
 };
