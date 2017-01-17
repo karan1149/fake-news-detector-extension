@@ -1,6 +1,6 @@
 {
  "name": "Fake News Detector AI: Detect Unreliable News",
- "version": "1",
+ "version": "2",
  "description": "Detect fake news sites based on whether they are similar to known fake news sites using the power of artificial intelligence.",
  "manifest_version": 2,
  "browser_action": {
